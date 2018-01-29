@@ -1,10 +1,15 @@
 *.aux
-*.vbl
+*.bbl
 *.blg
 *.lof
 *.log
 *.lot
 *.out
-*.run.xml
+thesis.run.xml
+thesis-blx.bib
 *.bak
 *.toc
+*.fdb_latexmk
+*.fls
+*.pdf
+*.gz
