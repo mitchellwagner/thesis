@@ -1,3 +1,4 @@
+%" vim: fdm=marker:fen:fdl=0
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Document type, global settings, and packages
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -53,7 +54,7 @@
 % \input for title page through acknowledgements
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%input: title, approval, epigraph, dedication, acknowledgments
+%input: title, approval, epigraph, dedication, acknowledgments%{{{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Title Page
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -91,13 +92,13 @@
 %\addtocontents{toc}{\cftpagenumbersoff{chapter}} 
 
 %\currentpdfbookmark{Acknowledgments}{acknowledgments}
-%\addtocontents{toc}{\cftpagenumberson{chapter}} 
+%\addtocontents{toc}{\cftpagenumberson{chapter}} %}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Table of Contents
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Format for Table of Contents
+% Format for Table of Contents%{{{
 \renewcommand{\cftchapdotsep}{\cftdotsep}  %add dot separators
 \renewcommand{\cftchapfont}{\bfseries}  %set title font weight
 \renewcommand{\cftchappagefont}{}  %set page number font weight
@@ -107,9 +108,9 @@
 \renewcommand{\cftchapafterpnum}{\vskip\baselineskip} %set correct spacing for entries in single space environment
 \renewcommand{\cftsecafterpnum}{\vskip\baselineskip}  %set correct spacing for entries in single space environment
 \renewcommand{\cftsubsecafterpnum}{\vskip\baselineskip} %set correct spacing for entries in single space environment
-\renewcommand{\cftsubsubsecafterpnum}{\vskip\baselineskip} %set correct spacing for entries in single space environment
+\renewcommand{\cftsubsubsecafterpnum}{\vskip\baselineskip} %set correct spacing for entries in single space environment%}}}
 
-%format title font size and position (this also applys to list of figures and list of tables)
+%format title font size and position (this also applys to list of figures and list of tables)%{{{
 \titleformat{\chapter}[display]
 {\normalfont\bfseries\filcenter}{\chaptertitlename\ \thechapter}{0pt}{\MakeUppercase{#1}}
 
@@ -121,13 +122,13 @@
 
 \currentpdfbookmark{Table of Contents}{TOC}
 
-\clearpage
+\clearpage%}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % List of figures and tables
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%figures and tables formating
+%figures and tables formating%{{{
 \addcontentsline{toc}{chapter}{List of Tables}
 \begin{singlespace}
 	\setlength\cftbeforetabskip{\baselineskip}  %manually set spacing between entries
@@ -143,7 +144,7 @@
 \end{singlespace}
 
 \clearpage
-
+%}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % This is the Summary (abstract should be separate document)
@@ -158,7 +159,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%
-% formatting
+% formatting%{{{
 
 % resume page numbering for rest of document
 \clearpage
@@ -179,11 +180,11 @@
 
 % Adjust subsubsection title formatting
 \titleformat{\subsubsection}{\normalfont\itshape}{\thesubsection}{1em}{#1}
-
+%}}}
 %%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%
-%input chapters1-7, appendices
+%input chapters1-7, appendices%{{{
 %%%%%%%%%%%%%%%%
 % Chapter 1
 %%%%%%%%%%%%%%%%
@@ -231,7 +232,7 @@
 %%%%%%%%%%%%%%%%
 
 \input{appendix.tex}
-
+%}}}
 %%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%
