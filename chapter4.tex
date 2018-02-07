@@ -21,7 +21,12 @@ To start, the germanium boule slice is cut into several rectangular cubes.
 Then, work proceeds using one of the cubes, saving the rest for the next time.%}}}
 % Section: Mechanical Processing%{{{
 \section{Mechanical Processing}
-
+The diamond saw under discussion is the SYJ-400 Precision CNC Dicing/Cutting Saw from Shenyang Kejing Auto-Instrument Co.
+The structure of this diamond saw is shown below in Figure \ref{fig:diamondsaw}.
+It is operated using a CNC controller with setting for the cutting speed, length, time, depth, lifting height, rest time, and movement speed.
+All of these parameters are edited using the attached CNC controller. 
+There are four separate screens with adjustable parameters that are shown with translations in Figure \ref{fig:control-screen}. 
+Each of these parameters are in millimeters or millimeters per minute depending on the operation.
 \begin{figure}[htpb]
 \centering
 \includegraphics[width=0.5\textwidth]{diamond-saw.jpg}
@@ -29,6 +34,51 @@ Then, work proceeds using one of the cubes, saving the rest for the next time.%}
 \label{fig:diamondsaw}
 \end{figure}
 
+\begin{sidewaysfigure}
+\includegraphics[width=\textwidth]{control-screen}
+\caption{These are the four settings screens and translations from the diamond saw controller.}
+\label{fig:control-screen}
+\end{sidewaysfigure}
+
+Before turning on the power to the diamond saw, it is important to take care of all of the necessary adjustments such as changing blades and placing the sample onto the vacuum chuck.
+It is important to do this before supplying power in order to prevent the saw from somehow starting itself.
+To switch blades, first remove the finger screw, labeled 1, on the outside of the splash guard covering the blade. Then remove the finger screw, labeled 2, that holds the blade clamps.
+Remove the outer blade clamp and the blade can be switched out.
+Depending on the blade size, it may be necessary to change to a larger splash guard.
+To do this, first remove finger screw 1 on the outside of the splash guard, then remove the two hex screws, labeled H, on the back plate.
+It might be necessary to remove the blade to access these screws.
+You can then install the new splash guard and blade working in the opposite order to put everything back together.
+\begin{figure}[htpb]
+\centering
+\includegraphics[width=0.5\textwidth]{blade-case}
+\caption{This is the blade and shielding on the diamond saw.}
+\label{fig:blade-case}
+\end{figure}
+
+There are currently three different blades available for cutting.
+They include: 4” electroplated diamond blade, 4” full sintered diamond blade, and a 4” grinding blade. 
+\begin{figure}[htpb]
+\centering
+\includegraphics[width=0.5\textwidth]{blades}
+\caption{Three different blade types for cutting germanium.}
+\label{fig:blades}
+\end{figure}
+
+The next step is to mount your sample onto the vacuum chuck.
+It is essential to do this before powering on the diamond saw to avoid accidents.
+Place the steel sample holder onto the vacuum chuck and adjust it so it is properly aligned.
+Powering on the vacuum will come in the next steps.
+\begin{figure}[htpb]
+\centering
+\includegraphics[width=0.5\textwidth]{cut-sample}
+\caption{A germanium sample mounted on graphite which is then mounted on a stainless steel chuck.}
+\label{fig:cut-sample}
+\end{figure}
+
+To start the diamond saw, first turn on the power strip.
+This will provide power to the vacuum pump and the up/down power converter.
+The next step is to power on the up/down converter that is located under the table that supports the diamond saw.
+This will provide a stepped up voltage to the CNC controller (which powers the saw) and the water pump.
 \begin{figure}[htpb]
 \centering
 \includegraphics[width=0.5\textwidth]{lapping.jpg}
