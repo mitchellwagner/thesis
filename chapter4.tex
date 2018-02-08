@@ -50,7 +50,9 @@ You can then install the new splash guard and blade working in the opposite orde
 \end{figure}
 
 There are currently three different blades available for cutting.
-They include: 4” electroplated diamond blade, 4” full sintered diamond blade, and a 4” grinding blade. 
+They are all four inches in diameter and include: an electroplated diamond blade, full sintered diamond blade, and a 2mm grinding wheel.
+The electroplated blade is thin and useful for the initial cuts of the boule.
+The grinding wheel is used to make grooves and grind down the detector wings.
 \begin{figure}[htpb]
 \centering
 \includegraphics[width=0.5\textwidth]{blades}
@@ -61,14 +63,34 @@ They include: 4” electroplated diamond blade, 4” full sintered diamond blade
 The next step is to mount your sample onto the vacuum chuck.
 It is essential to do this before powering on the diamond saw to avoid accidents.
 Place the steel sample holder onto the vacuum chuck and adjust it so it is properly aligned.
-Powering on the vacuum will come in the next steps.
+The vacuum can then be turned on to suction the chuck and keep the sample from moving during cutting.
+To start the diamond saw, the power strip must be plugged in and turned on.
+The strip will provide power to the vacuum pump and the up/down voltage converter.
+The next step is to power on the up/down converter that is located under the table that supports the diamond saw.
+The converter will provide a stepped up voltage to the CNC controller (which powers the saw) and the water pump.
+The saw controller requires 220 volts which is why it cannot be plugged into a standard outlet.
+
+The first cuts of the boule should be made with the thin diamond blade and go all the way through the germanium into the graphite plate.
+The initial cuts are to cut the rough detector shape out of the crystal slice.
+An example of a cut boule can be seen in Figure ~\ref{fig:cutboule} where four detector samples are cut from a single crystal.
 \begin{figure}[htpb]
 \centering
 \includegraphics[width=0.5\textwidth]{cut-boule.jpg}
 \caption{This is the crystal boule after the initial detector sample blanks have been cut.}
 \label{fig:cutboule}
 \end{figure}
+The saw must be start and stopped using the provided controller.
+All of the settings and translations can be seen in the appendix in Figure ~\ref{fig:control-screen}.
+One property of germanium is that it is an extremely brittle metal.
+This can cause problems when cutting because the material will chip under normal cutting speeds.
+Due to this problem, the diamond saw must travel less that a millimeter per minute and grind the germanium instead of cutting it.
 
+After the detector blanks have been cut from the boule, the stainless steel and graphite plate are reheated to melt the wax and remove all the extra pieces.
+A single detector sample is then left and centered on the graphite for further cutting.
+The next step is to replace the thin blade with the grinding wheel so that the groove cuts can be made.
+A detector can have either two or four wings depending on the final goal.
+The groove are ground out approximately two millimeters from the edge of the sample, then the sample is moved and the remaining bits are ground down to leave the wing shape.
+An example of a detector with four wings is shown in Figure ~\ref{fig:cut-sample}.
 \begin{figure}[htpb]
 \centering
 \includegraphics[width=0.5\textwidth]{cut-sample.JPG}
@@ -76,10 +98,13 @@ Powering on the vacuum will come in the next steps.
 \label{fig:cut-sample}
 \end{figure}
 
-To start the diamond saw, first turn on the power strip.
-This will provide power to the vacuum pump and the up/down power converter.
-The next step is to power on the up/down converter that is located under the table that supports the diamond saw.
-This will provide a stepped up voltage to the CNC controller (which powers the saw) and the water pump.
+After the detector has finished up in the diamond saw, it is left with a very rough surface that might have some minor chipping along the edge.
+Any cracks or large chips can lead to detector failure down the line so they must be removed before continuing.
+The first and most effective way to remove material is through lapping.
+For lapping, an abrasive is mixed with water on a glass plate to create a slurry.
+The detector is then ran across the slurry which slow grinds down the surface.
+The speed of material removal is based on the type and particle size of the abrasive.
+To remove lots of material, a  
 \begin{figure}[htpb]
 \centering
 \includegraphics[width=0.5\textwidth]{lapping.jpg}
@@ -89,6 +114,12 @@ This will provide a stepped up voltage to the CNC controller (which powers the s
 % Section: Chemical Processing%{{{
 \section{Chemical Processing}
 
+The cutting and lapping leaves the surface of the detector with micro scratches and defects, sometimes invisible to the naked eye, that could lead to failure down the process line if not treated properly.
+Since the next step of detector fabrication involves depositing thin layers of metal that need to stick together, it is important that the surface is as smooth and clean as possible.
+
+Several chemical treatments are commonly used in the semiconductor industry to deal with such cleaning and polishing.
+For cleaning there are solvents such as acetone, methanol, and Trichloroethylene that are used to remove the wax and debree after cutting.
+The detector manufacturing lab is equipped with a metal hood for such operations involving these solvents that is shown in Figure ~\ref{fig:metalhood}
 \begin{figure}[htpb]
 \centering
 \includegraphics[width=0.5\textwidth]{metal-hood.jpg}
@@ -96,6 +127,7 @@ This will provide a stepped up voltage to the CNC controller (which powers the s
 \label{fig:metalhood}
 \end{figure}
 
+For polishing it is standard to use a mixture of Nitric (HNO$_3$) and hydrofluoric (HF) acids.
 
 \begin{figure}[htpb]
 \centering
