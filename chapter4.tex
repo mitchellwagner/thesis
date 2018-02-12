@@ -324,19 +324,29 @@ Once the turbo pump has reached 42 krpm it is ready to vacuum.
 \label{fig:vac-control}
 \end{figure}
 
+The vacuum pumps are located in a cabinet directly under the e-beam chamber as shown in Figure \ref{fig:ebeam-flow}.
+The turbo pump has a separate controller that displays the speed which can be seen when the cabinet is opened.
 Pressing seal will isolate the turbo pump from the chamber and allow it to be vented so the sample can be placed inside.
 Once sealed, the vent button can be pressed which will open the valve allowing nitrogen to fill the chamber.
-After the chamber has reached atmospheric pressure the door will be able to open and the sample can be placed loaded onto the holder shown in Figure \ref{fig:ebeam-holder}
+After the chamber has reached atmospheric pressure the door will be able to open and the sample can be placed loaded onto the holder shown in Figure \ref{fig:ebeam-holder}.
+The holder can then be secured inside the chamber using a hex screw and wrench.
 \begin{figure}[htpb]
 \centering
 \includegraphics[width=0.6\textwidth]{ebeam-holder}
 \caption{Sample holder for the E-Beam}
 \label{fig:ebeam-holder}
 \end{figure}
+Once the sample is loaded, the chamber door can be closed and the the process button pressed.
+This will open up the chamber to the vacuum system and start the rough pump.
+Once the vacuum has reached sufficient level, the turbo pump will automatically turn on.
+The vacuum must reach around $10^{-6}$ torr before the aluminum deposition can start.
 
-The e-beam, like the sputtering machine, is only operated under high vacuum.
-The vacuum pumps are located in a cabinet directly under the e-beam chamber as shown in Figure \ref{fig:ebeam-flow}.
-
+Once the proper pressure is reached, the aluminum deposition can begin.
+To start, the electron gun power supply is turned on by flipping the switch on the front panel of the high voltage power supply.
+Then the on/off switch on the source control, shown in the upper right of Figure \ref{fig:source-control}, can be switched on.
+The gun button can then be depressed.
+This will provide around 4.9 kV to the electron gun, however, the current remains at 0 so there is no flow of electrons yet.
+The current can then be turned up slowly using the dial labeled current.
 \begin{figure}[htpb]
 \centering
 \includegraphics[width=\textwidth]{source-control.JPG}
@@ -344,10 +354,27 @@ The vacuum pumps are located in a cabinet directly under the e-beam chamber as s
 \label{fig:source-control}
 \end{figure}
 
+Once the current has reached around 17 mA, the sweep control can be turned on by switching the dial from 0 to 1.
+The current can then be continued to increase until the Data/Rate of the crystal monitor is a steady 0.1-0.2 nm/min.
+Once the deposition has stabalized, the shutter can be opened by pressing run on the FTM7 controll panel.
+This will automatically open the shutter until the predefined thickness, usually around 100nm, is reached.
+The shutter will then automatically close and the current can slowly be reduced to zero.
+
 \begin{sidewaysfigure}
 \includegraphics[width=\textwidth]{ebeam-flow}
 \caption{This is a diagram of the of the electron beam machine.It is used to deposit aluminum onto the detector sample.}
 \label{fig:ebeam-flow}
-\end{sidewaysfigure}%}}}
+\end{sidewaysfigure}
+%}}}
 % Section: Final Steps%{{{
-\section{Final Steps}%}}}
+
+\section{Final Steps}
+
+\begin{figure}[htpb]
+\centering
+\includegraphics[width=0.4\textwidth]{taped}
+\caption{Detector with tape masking before etching.}
+\label{fig:taped}
+\end{figure}
+
+%}}}
