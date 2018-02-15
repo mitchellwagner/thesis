@@ -197,10 +197,21 @@ After the detector sample is dried, it can be placed onto the sputtering jig and
 \section{Amorphous Ge Deposition}
 
 Need information on the working principles of sputtering machine
-also need more on the range measurement, marks papers citing specific values for settings 
+also need more on the range measurement, marks papers citing specific values for settings
 \subsection{Principles of Sputtering}
-\subsection{Sputtering Calibration}
 
+\subsection{Sputtering Calibration}
+The amorphous germanium layer must achieve a minimum thickness in order to operate correctly.
+Thus it is necessary to evaluate how much AGe is deposited during normal operating procedure with typical settings that would be used during detector fabrication.
+The sputtering thickness is a function of time, distance from the target, gas pressure, and RF power.
+The gas pressure of 14 mTorr has been found to be optimal and the sputtering machine at USD can generate a good plasma at this pressure with 100 watts of RF power.
+Thus the only variables remaining are the amount of time sputtering and the position of the sample inside the machine.
+
+To find out the optimal sputtering length and position, an experiment involving clean glass slides was implemented.
+The idea is to block off a portion of the slide using tape and then to measure the step from the AGe region to the taped section.
+The experiment was set up as shown in Figure \ref{fig:tape-test-s} using five glass slides in a cross shape centered under the amorphous germanium target.
+The sputtering stage was set to the lowest position meaning that it was as far away from the target as possible.
+The samples were then sputtered for 15 total minutes using a pressure of 14 mTorr and 100 watts of power.
 \begin{figure}[htpb]
 \centering
 \includegraphics[width=0.5\textwidth]{tape-test-s}
@@ -208,9 +219,14 @@ also need more on the range measurement, marks papers citing specific values for
 \label{fig:tape-test-s}
 \end{figure}
 
+Afterwords, the samples were removed from the sputtering machine and the tape was peeled off leaving a portion of the slide untouched by the deposition.
+A machine called the Alpha-Step Profiler was used to measure the thickness of the deposited layer.
+The profiler works by running a needle a predefined length across the surface.
+Then it is possible to go from the clean layer to the AGe and measure the step up and thus thickness of the deposited layer.
+Figure \ref{fig:surface-prof} shows a plot of the thickness measured across the samples.
 \begin{figure}[htpb]
 \centering
-\includegraphics[width=0.5\textwidth]{surface-prof}
+\includegraphics[width=0.8\textwidth]{surface-prof}
 \caption{results of surface scan}
 \label{fig:surface-prof}
 \end{figure}
