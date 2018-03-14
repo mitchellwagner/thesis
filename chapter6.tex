@@ -32,30 +32,39 @@ The detector itself is mounted on some surface which is covered with a metal cap
 The air is then vacuumed from the enclosure and the detector is able to be efficiently cooled to under 100K.
 The method of how the detector is cooled is what varies among different cryostat designs.
 
+Figure \ref{fig:cryostats} shows two types of cryostat designs.
+The left side of the figure depicts a cryostat with a cooling finger design.
+Typically the detector is in thermal contact with a long metal rod that is submerged in liquid nitrogen.
+The rod will eventually reach thermal equilibrium with the liquid nitrogen and is able to then able cool the detector.
 \begin{figure}[htpb]
 \centering
 \includegraphics[width=\textwidth]{cryostats}
 \caption{Two different cryostat designs}
 \label{fig:cryostats}
 \end{figure}
+The right side of Figure \ref{fig:cryostats} depicts another cryostat that is gravity fed.
+Liquid nitrogen is added to a Dewar that sits on top of the detector housing.
+Liquid nitrogen can then fill tubes that are connected to the stage holding the detector.
+The stage will then reach equilibrium with the liquid nitrogen and cool the detector.
 
-needs to be easily cooled
-measure temp and provide heat.
-Key is the L shaped pipe were LN is stored along with gravity feed Dewar. This is the difference between most cryostats.
-Cooling finger
-Submersable 
-Gravity feed
-Advantages and disadvantages of these.
+Both designs come with advantages and disadvantages.
+The cold finger design is widely used commercialy due to its simple design and adaptability to fit many Dewars.
+However, the cold finger has draw backs in the minimum temperature that the cryostat can reach.
+Portions of the cold finger in direct contact with LN can reach LN temperature, however, points out of the nigtrogen will have a temperature gradiant that increases along the shaft.
+Thus the detector itself will usually be 20 to 30 degrees above that of liquid nitrogen.
+The cooling itself is also quite slow with the cold finger method and it can take half a day to cool down.
 
-Have chapter- on test stand
-
-Chapter Detector characterization
-Sections- each with methods and results
-Leakage current
-Capacitance
-Spectrum
+The gravity fed design has an advantage that the liquid nitrogen fills the L shaped tube which directly connects to the detector stage.
+This results in the detector being much closer to LN  and thus LN temperatures.
+The detector can also be relatively quickly cooled down, reaching 80 Kelvin in approximately four hours.
 
 
+As shown in Figure \ref{fig:cryostat-whole}, the cryostat used at USD for detector characterization and testing is of the gravity fed design.
+This particular cryostat was custom designed and manufactured at LBNL.
+It has the ability to measure and control the temperature of the germanium detector through the use of a thermistor and heater resistor.
+Removing the aluminum can on the front of the detector reveals the inner detector along with the cooling structure as shown in Figure \ref{fig:inner-cryostat}.
+Here the detector can be seen as the top hat shaped crystal with a gold foil covered contact placed on the top surface.
+Several wires can also be seen leading to the external electronics and circuitry.
 \begin{figure}[htpb]
 \centering
 \includegraphics[width=0.8\textwidth]{inner-cryostat}
@@ -63,12 +72,11 @@ Spectrum
 \label{fig:inner-cryostat}
 \end{figure}
 
-\begin{figure}[htpb]
-\centering
-\includegraphics[width=0.7\textwidth]{inputs}
-\caption{Zoomed in view of the electrical inputs and circuitry}
-\label{fig:inputs}
-\end{figure}
+cold finger is easier for user since all they have to do is dip into LN, however it is hard to open or not allowed.
+Gravity fed design, u are responsible for vacuum, it is for reserach
+
+Figure \ref{fig:inputs} shows a view of the cryostat head alond with the attached input boxes, vacuum tube, and the interface between the cryostat and gravity fed Dewar.
+
 
 \begin{figure}[htpb]
 \centering
@@ -100,13 +108,6 @@ Spectrum
 
 \begin{figure}[htpb]
 \centering
-\includegraphics[width=0.7\textwidth]{multimeter}
-\caption{Multimeter used to measure leakage current}
-\label{fig:multimeter}
-\end{figure}
-
-\begin{figure}[htpb]
-\centering
 \includegraphics[width=\textwidth]{temp-sens}
 \caption{Temperature monitoring and control system with heater}
 \label{fig:temp-sens}
@@ -114,7 +115,14 @@ Spectrum
 
 \begin{figure}[htpb]
 \centering
-\includegraphics[width=0.5\textwidth]{transimpedence}
+\includegraphics[width=0.5\textwidth, angle=-90]{transimpedence}
 \caption{Device for converting low current to voltage}
 \label{fig:transimpedence}
 \end{figure}
+
+Chapter Detector characterization
+Sections- each with methods and results
+Leakage current
+Capacitance
+Spectrum
+
