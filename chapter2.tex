@@ -113,13 +113,22 @@ This beta decay can end up creating secondary gamma rays with distinct energy
 \label{fig:k40decay}
 \end{figure}
 If a detector is place near an abundant source of potassium 40, hundreds or even thousands of gamma rays could interact with it depending on how long it is exposed.
+The gamma rays can deposit their energy via the three methods mentioned in the previous section: photoelectric effect, Compton scattering, or pair production.
+Gammas of low energy will undergo the photoelectric effect and deposit all of their energy to the detector.
+At higher energies Compton scattering becomes dominant.
+The amount of energy deposited into the detector during a single Compton scattering event is given by the formula:
+\begin{align}
+  E_c=h\nu \left[ \frac{ \frac{h\nu}{m_0c^2}(1-\cos \theta ) }{1+\frac{h\nu}{m_0c^2}(1-\cos \theta )} \right]
+\end{align}
+The process that the gamma undergoes is directly related to its energy.
+Figure \ref{fig:gammafraction} shows the relationship between incident photon energy and the resultant fraction of the full energy peak coming from the various interaction possibilities.
 Statistically, a proportion of the gamma rays would deposit all of their energy in the detector.
 
 
 \begin{figure}[htpb]
 \centering
-\includegraphics[width=0.6\textwidth]{gammafraction}
-\caption{Decay scheme of Potassium 40}
+\includegraphics[width=0.4\textwidth]{gammafraction}
+  \caption{Decay scheme of Potassium 40 \cite{Roth1984SegmentationAP}}
 \label{fig:gammafraction}
 \end{figure}
 understand the spectrum based on energy, compton shoulder, peaks, overall shape, etc Knolls book Ch10.F.2
