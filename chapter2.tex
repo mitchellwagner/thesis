@@ -91,6 +91,16 @@ The final interation is pair production.
 Pair production can occur only if the gamma ray has an energy in excess of twice the rest mass of an electron.
 The interaction takes place within the coulomb field of the nucleus and causes the gamma ray to disapear and be replaced by an electron positron pair.
 The positron will go on to annihilate which results in the creation of two more gamma rays that could deposit some energy to the detector.
+\begin{figure}[htpb]
+\centering
+\includegraphics[width=0.4\textwidth]{gammafraction}
+  \caption{Fraction of full enrgy peak from different gamma interaction methods in a 6 cm $\times$ 6 cm coaxial HPGe detector expected from a Monte Carlo simulation. \cite{Roth1984SegmentationAP}}
+\label{fig:gammafraction}
+\end{figure}
+Figure \ref{fig:gammafraction} shows the relationship between the various gamma interaction methods and how likely they are to be responsible for the full energy peak obtained during spectroscopy.
+It shows that the lowest energy gammas are likely to directly undergo the photoelectric effect and deposit all of their energy.
+As the gamma ray energy increases, it is more like to compton scatter at least once before depositing the rest of its energy via the photoelectric effect.
+Eventually pair production starts to dominate, however this method only becomes relavent for gamma energies that are typically above those produced by natural radioactivity.
 
 Protons, can behave like a neutron or muon, can interact with EM field or nucleus- might not be needed.
 
@@ -101,50 +111,53 @@ Thus if the entire gamma ray energy can be absorbed and measured by a radiation 
 If a detector is exposed to the environment, gamma rays over a wide distribution of energy with multiple peaks and plateus can be obtained.
 The particular interaction of matter and electromagnetic radiation such as a gamma ray is called spectroscopy.
 
-An often cited source of gamma radiation is from the man made radioactive isotope Cessium 137.
-Cessium 137 is a biproduct of nuclear bomb detonation and has a half life of about 30.166 years \cite{1992NIMPA}.
-Cessium 137 decays via beta minus emission as shown in Figure \ref{fig:cs137decay}.
-93.5\% of the time this will result in a Barium 137 atom with 662 keV of excess energy that is emitted in the form of a gamma ray.
-The other 6.5\% of the time results in the cessium decaying directly to the ground state of barium 137.
 \begin{figure}[htpb]
 \centering
 \includegraphics[width=0.5\textwidth]{cs137decay}
 \caption{Decay scheme of Cessium 137}
 \label{fig:cs137decay}
 \end{figure}
+An often cited source of gamma radiation is from the man made radioactive isotope Cessium 137.
+Cessium 137 is a biproduct of nuclear bomb detonation and has a half life of about 30.166 years \cite{1992NIMPA}.
+Cessium 137 decays via beta minus emission as shown in Figure \ref{fig:cs137decay}.
+93.5\% of the time this will result in a Barium 137 atom with 662 keV of excess energy that is emitted in the form of a gamma ray.
+The other 6.5\% of the time results in the cessium decaying directly to the ground state of barium 137.
 
 Cessium 137 is often used in detector calibration due to the abundance in nature and its single 662 keV gamma ray.
 If a source of cessium 137 is placed next to an ionization detector, a spectrum similar to Figure \ref{fig:cs137spectrum} can be obtained.
+The spectrum clearly shows a peak inbetween the energy values of 620 and 750 keV.
+If the detector could perdectly absorb and measure all of the energy from each gamma ray, it would result in a narrow peak around 662 keV; however, no detector is perfect and statistical flucuations lead to the widening of the peak.
+The measure of how precisly a detector can detect energy and read it out is called energy resolution.
 \begin{figure}[htpb]
 \centering
 \includegraphics[width=0.7\textwidth]{cs137spectrum}
 \caption{Energy spectrum from Cessium 137 using a scintillation based detector \cite{CS137SPEC} translated by Kolbasz}
 \label{fig:cs137spectrum}
 \end{figure}
+The energy resolution of the scintilation detector that was used to obtain the spectrum in Figure \ref{fig:cs137spectrum} is relatively poor due to the wide spread of energy around the known value of 662 keV.
 
+Moving to lower energies on the spectrum, two other features stand out among the background: the compton edge and backscatter peaks.
+The compton shoulder is a feature of any detector sensitive to gamma rays and is based on their penetrating nature.
+The gamma rays can deposit their energy into a detector via the three methods mentioned in the previous section: photoelectric effect, Compton scattering, or pair production.
+Gammas of low energy will undergo the photoelectric effect and deposit all of their energy to the detector; however, according to Figure \ref{fig:gammafraction}, A full energy peak at 662 keV would have less than 10\% of events coming from single photoelectric events.
+20\% of the events would be from a single compton scattering event and photoelectric effect, and 70\% would be from multiple compton scattering events ending in photoelectric effect.
+Since the dominating interaction is compton scattering, it is clear that some gamma rays could compton scatter inside a detector and then exit without depositing the rest of its energy via photoelectric effect.
+Such events would thus only deposit a portion of their energy in the detector resulting in the compton shoulder shown in Figure \ref{fig:cs137spectrum}.
 
-If a detector is place near an abundant source of potassium 40, hundreds or even thousands of gamma rays could interact with it depending on how long it is exposed.
-The gamma rays can deposit their energy via the three methods mentioned in the previous section: photoelectric effect, Compton scattering, or pair production.
-Gammas of low energy will undergo the photoelectric effect and deposit all of their energy to the detector.
-At higher energies Compton scattering becomes dominant.
 The amount of energy deposited into the detector during a single Compton scattering event is given by the formula:
 \begin{align}
   E_c=h\nu \left[ \frac{ \frac{h\nu}{m_0c^2}(1-\cos \theta ) }{1+\frac{h\nu}{m_0c^2}(1-\cos \theta )} \right]
 \end{align}
-The process that the gamma undergoes is directly related to its energy.
-Figure \ref{fig:gammafraction} shows the relationship between incident photon energy and the resultant fraction of the full energy peak coming from the various interaction possibilities.
-Statistically, a proportion of the gamma rays would deposit all of their energy in the detector.
-
-
-\begin{figure}[htpb]
-\centering
-\includegraphics[width=0.4\textwidth]{gammafraction}
-  \caption{Decay scheme of Potassium 40 \cite{Roth1984SegmentationAP}}
-\label{fig:gammafraction}
-\end{figure}
-understand the spectrum based on energy, compton shoulder, peaks, overall shape, etc Knolls book Ch10.F.2
-energy resolution-random process for creation of electrons and holes 2.9 eV (average energy required to create electron hole pair) can also be caused by electron noise. some trapping of electrons and holes.
-energy calibration and resolution,
+Here $E_c$ is the energy lost by the gamma based on various scattering angles $\theta$ and incoming gamma energy $h\nu$.
+The rest mass of the electron $m_0$ is also important as that is what the gamma is scattering off of.
+This formula has clear maximum and minum values based on the scattering angle.
+A gamma ray that enters the detector and scatters 180 degrees back out would deposit the maximum energy possible in one scattering event.
+This value can be calculated for the 662 keV peak from cessium 137.
+Plugging in the values of 662 keV for $h\nu$, 1 for $c^2$, 511 keV for $m_0$, and 180 degrees for $\theta$ results in an $E_c$ of 477 keV.
+This energy reflects the compton edge from Figure \ref{fig:cs137spectrum}.
+The backscatter peak energy can be calculated by subtracting this max value of $E_c$ from the full energy peak value.
+In the case of Cessium 137, this would be around 185 keV which also reflects that shown in the cessium spectrum.
+Backscatter energies come from gamma rays that have compton scattered off something other than the detector and thus lost a portion of their energy before depositing some or the rest in a detector.
 
 \section{semiconducter diode detector} 
 Read all of chapter 11, skip section VI, Channeling
