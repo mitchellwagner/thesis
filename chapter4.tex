@@ -1,5 +1,3 @@
-%" vim: fdm=marker:fen:fdl=0
-% Manufacturing of Planar Detectors Chapter intro%{{{
 \chapter{Crystal Processing}
 The manufacturing process of a planar HPGe detector begins with a slice from a crystal boule that has been tested for quality and is know to be detector grade.
 Typical boules slices are solid discs that can range from a few millimeters up to several centimeters in thickness and 5+ centimeters in diameter.
@@ -17,21 +15,16 @@ What is of importance are the overall thickness and that the top and bottom face
 Due to the relatively long mean free path of gamma rays in germanium, a detector should aim to be at least one centimeter thick.
 
 Once considerations for geometry have been made, the detector manufacturing process begins.
-To start, the germanium boule slice is cut into several rectangular cubes.
-Then, work proceeds using one of the cubes, saving the rest for the next time.
+To start, the germanium boule slice is cut into several rectangular cubes using a diamond CNC saw.
+Then, work proceeds using one of the cubes, saving the others for the next time.
+The cube is further cut and ground to the top hat shape of \ref{fig:dummydet}.
+After cutting, the sample is lapped, polished, and then undergoes a chemical etching afterwhich it is ready for thin film deposition.
 
-Sometime, detectors will end up breaking down or failing completely.
+Sometimes detectors will end up breaking down or failing completely.
 Thus it is necessary to understand the properties of the germanium at every step of the manufacturing process.
 A key method to quality insurance is to understand surface properties and how they change during mechanical and chemical processing as well as the thin film thicknesses.
 To measure and analyze these, an optical microscope and a surface profiler are used.
 
-The optical microscope is a
-
-To prolie the surface a machine called the Alpha-Step profiler is used.
-
-
-%}}}
-% Section: Mechanical Processing%{{{
 \section{Mechanical Processing}
 The diamond saw under discussion is the SYJ-400 Precision CNC Dicing/Cutting Saw from Shenyang Kejing Auto-Instrument Co.
 The structure of this diamond saw is shown below in Figure \ref{fig:diamondsaw}.
@@ -46,15 +39,6 @@ Each of these parameters are in millimeters or millimeters per minute depending 
 \label{fig:diamondsaw}
 \end{figure}
 
-Before turning on the power to the diamond saw, it is important to take care of all of the necessary adjustments such as changing blades and placing the sample onto the vacuum chuck.
-It is important to do this before supplying power in order to prevent the saw from somehow starting itself.
-To switch blades, first remove the finger screw, labeled 1, on the outside of the splash guard covering the blade. Then remove the finger screw, labeled 2, that holds the blade clamps.
-Remove the outer blade clamp and the blade can be switched out.
-Depending on the blade size, it may be necessary to change to a larger splash guard.
-To do this, first remove finger screw 1 on the outside of the splash guard, then remove the two hex screws, labeled H, on the back plate.
-It might be necessary to remove the blade to access these screws.
-You can then install the new splash guard and blade working in the opposite order to put everything back together.
-
 There are currently three different blades available for cutting.
 They are all four inches in diameter and include: an electroplated diamond blade, full sintered diamond blade, and a 2mm grinding wheel.
 The electroplated blade is thin and useful for the initial cuts of the boule.
@@ -62,7 +46,7 @@ The grinding wheel is used to make grooves and grind down the detector wings.
 
 The next step is to mount your sample onto the vacuum chuck.
 It is essential to do this before powering on the diamond saw to avoid accidents.
-Place the steel sample holder onto the vacuum chuck and adjust it so it is properly aligned.
+The steel sample holder is placed onto the vacuum chuck and adjusted so it is properly aligned.
 The vacuum can then be turned on to suction the chuck and keep the sample from moving during cutting.
 To start the diamond saw, the power strip must be plugged in and turned on.
 The strip will provide power to the vacuum pump and the up/down voltage converter.
@@ -125,8 +109,6 @@ Ocassionaly further polishing is required to reduce the amount of time required 
 In order to achieve a mirror like finish prior to acid etching, a polishing pad can be used.
 When using the polishing pad, shown in Figure \ref{fig:lapping}, it is important to use an abrasive of 3 microns or less to achieve a nice finish.
 
-%}}}
-% Section: Chemical Processing%{{{
 \section{Chemical Processing}
 
 The cutting and lapping leaves the surface of the detector with micro scratches and defects, sometimes invisible to the naked eye, that could lead to failure down the process line if not treated properly.
@@ -193,5 +175,5 @@ The same etch mixture is used as in the long etch, only this time the sample is 
 Being held continuously prevents the surface from contacting anything other than acid and keeps it free from the possibility that more scratches are introduced.
 The steps of quenching in DI water and drying with nitrogen are the same with importance being placed on the sample being held and never allowed to touch any surfaces.
 After the detector sample is dried, it can be placed onto the sputtering jig and loaded into the sputtering machine.
-%}}}
+
 
