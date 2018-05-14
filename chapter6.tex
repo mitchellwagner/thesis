@@ -12,7 +12,7 @@ The detector capacitance and depletion voltage can also give an accurate measure
 Finally the detector spectrum is measured using several radioactive sources such as cobalt 60 and cesium 137.
 From this spectrum, the energy resolution of the detector can be determined and thus the overall quality.
 
-All of these measurement must be taken while the detector is at cryogenic temperatures as described in chapter 2.
+All of these measurement must be taken while the detector is at cryogenic temperatures.
 They also require the integration of several pieces of electronics that must be easily interchanged to make the different measurements.
 The cryostat used at USD is shown in Figure \ref{fig:cryostat-whole}.
 In the figure, the black cords coming into the base on the right and left side are a mix of high voltage and signal cables.
@@ -53,11 +53,15 @@ However, the cold finger has draw backs in the minimum temperature that the cryo
 Portions of the cold finger in direct contact with LN can reach LN temperature, however, points out of the nigtrogen will have a temperature gradiant that increases along the shaft.
 Thus the detector itself will usually be 20 to 30 degrees above that of liquid nitrogen.
 The cooling itself is also quite slow with the cold finger method and it can take half a day to cool down.
-
+\begin{figure}[htpb]
+\centering
+\includegraphics[width=0.8\textwidth]{inner-cryostat}
+\caption{}
+\label{fig:inner-cryostat}
+\end{figure}
 The gravity fed design has an advantage that the liquid nitrogen fills the L shaped tube which directly connects to the detector stage.
 This results in the detector being much closer to LN  and thus LN temperatures.
 The detector can also be relatively quickly cooled down, reaching 80 Kelvin in approximately four hours.
-
 
 As shown in Figure \ref{fig:cryostat-whole}, the cryostat used at USD for detector characterization and testing is of the gravity fed design.
 This particular cryostat was custom designed and manufactured at LBNL.
@@ -65,31 +69,73 @@ It has the ability to measure and control the temperature of the germanium detec
 Removing the aluminum can on the front of the detector reveals the inner detector along with the cooling structure as shown in Figure \ref{fig:inner-cryostat}.
 Here the detector can be seen as the top hat shaped crystal with a gold foil covered contact placed on the top surface.
 Several wires can also be seen leading to the external electronics and circuitry.
-\begin{figure}[htpb]
-\centering
-\includegraphics[width=0.8\textwidth]{inner-cryostat}
-\caption{}
-\label{fig:inner-cryostat}
-\end{figure}
+
 A cold finger design is easier for the user since all one has to do is dip the cold finger attached to the detector assembly into LN, however it is hard to open the housing or not allowed.
 The gravity fed design has a detector housing that is designed to be opened but the user is responsible for vacuum which makes it nice for research.
+Figure \ref{fig:cryostat-whole} shows a view of the cryostat used at USD with the attached input boxes, vacuum tube, and the interface between the cryostat and gravity fed Dewar.
+\begin{figure}[htpb]
+\centering
+\includegraphics[width=\textwidth]{crate}
+\caption{The electronics crate used in detector characterization. From left to right: Orted shaping amplifier, Canberra pulsar, Ortec ASPEC multi chanel analyzer, preamplifier power supply, Canberra HV supply, CAEN HV supply, Tennelec shaping amplifier}
+\label{fig:crate}
+\end{figure}
 
-Figure \ref{fig:cryostat-whole} shows a view of the cryostat head alond with the attached input boxes, vacuum tube, and the interface between the cryostat and gravity fed Dewar.
-
-
+\section{Testing}
+In order to prove the validity of the entire detector manufacturing process at USD, a detector of known purity from a commercial vendor was processed and tested.
+The detector was named HP50765-1N and was through all steps of processing besides cutting which was done by Mark Amman at LBNL.
+The first step in detector testing is to measure the leakage current.
+If the leakage current is not within a few picoamps to well beyond the depletion voltage, the detector will not function properly
 \begin{figure}[htpb]
 \centering
 \includegraphics[width=\textwidth]{outline}
 \caption{Simple circuit diagram of the germanium detector electronics. Courtesy of Mark Amman}
 \label{fig:outline}
 \end{figure}
+Figure \ref{fig:outline} shows the circuit diagram of the detector and attached electronics inside of the cryostat and electronics housing.
+During the first test of a detector, the leakage current is measured with the preamplifier removed so the only avenue for current is out over the 1G$\Omega$ resistor.
+The leakage current typically seen during measurement is on the order of a few picoamps.
+This low current requires special equipment to be measured.
+At USD, a combination of a transimpedence amplifier and multimeter are used.
+The transimpedence amplifier takes the current and converts it to a voltage which can then be read out and recorded via a multimeter.
+\begin{figure}[htpb]
+\centering
+\includegraphics[width=\textwidth]{leakage-measurement}
+\caption{Setup diagram for leakage current measurement}
+\label{fig:leakage-measurement}
+\end{figure}
+
+To begin the testing, detector HP50765-1N was loaded into the cryostat and then cooled down to 79K at which temperature the measurements take place.
+\begin{figure}[htpb]
+\centering
+\includegraphics[width=\textwidth]{leakage-test}
+\caption{graph of leakage current vs applied voltage}
+\label{fig:leakage-test}
+\end{figure}
+Figure \ref{fig:leakage-test} shows the plot of leakage current vs applied voltage.
+The plot shows a stable leakage current of only a few picoamps until around 500 volts where the current begins to rise.
+The initial stability of the leakage current shows that the detector contacts are working but the rise means that they are far from perfect.
+A good detector should be able to have an applied voltage of several thousand volts before breaking down.
+
+The next step of detector testing is to measure the capacitance
+Capacitance measurements involve the use of an injected pulsar of known magnitude.
+Pulses are sent to the detector that mimic that of a signal.
+As the voltage accross the detector is changed, the magnitude of the pulsar will change until the detector reaches its depletion voltage.
+The height of this pulsar at depletion voltage can be used to determine the detector capacitance based on the formula:
+\begin{align*}
+C_d=\frac{Q}{V}=\frac{\frac{E\times 1.6\times 10^{-19}}{2.96ev}}{v(mV)\times \frac{8}{125}}
+\end{align*}
+where E is the pulsar energy and v(mV) is the pulsar output voltage from the oscilloscope
 
 \begin{figure}[htpb]
 \centering
-\includegraphics[width=\textwidth]{crate}
-\caption{The electronics crate used in detector characterization}
-\label{fig:crate}
+\includegraphics[width=\textwidth]{capacitance-test}
+\caption{Plot of detector capacitance vs applied voltage}
+\label{fig:capacitance-test}
 \end{figure}
+Figure \ref{fig:capacitance-test} shows a plot of the detector capacitance vs applied voltage.
+As mentioned earlier, the capacitance test can also be a rough test of determining depletion voltage and thus detector purity.
+For HP50765-1N, the detector reached a stable capacitance value, and thus depleted, at around 100 volts.
+This low depletion voltage means the detector is made of extremely pure material, on the order of $10^{9}cm^{-3}$
 
 \begin{figure}[htpb]
 \centering
@@ -97,7 +143,17 @@ Figure \ref{fig:cryostat-whole} shows a view of the cryostat head alond with the
 \caption{Spectrum obtained from detector NI with Cs 137 and pulsar peaks highlighted in blue. x-axis is counts}
 \label{fig:cs-137-test}
 \end{figure}
+Since the detector passed both the leakage current and capacitance tests, it can be exposed to a radioactive source and a spectrum can be obtained.
+For this test, the detector was exposed to a Cesium 137 source as well as continuous pulsar injection.
+Figure \ref{fig:cs-137-test} shows the spectrum after 40 minutes of exposure.
+The gamma ray and pusar peaks are highlighted in blue.
+As mentioned earlier, Cs 137 has a gamma ray peak at 662 keV which matches the spectrum perfectly.
+Also shown clearly is the compton edge and shoulder mentioned in chapter 2.
 
+The energy resolution of the detector can be determined by evaluating the pulsar and 662 keV peak for their width at half of the max point of the distribution.
+This is called full-width half max (FWHM) and is a measure of how spread out the energy distribution of the peak is.
+Perfect energy resolution would result in a straight line while spreading of the peak results in lower energy resolution.
+The Cs 137 peak at 662 kev for detector HP50765-1N has a FWHM of the 2.83 as shown in Figure \ref{fig:662-pulsar} which is similar to standard germanium detectors.
 \begin{figure}[htpb]
 \centering
 \includegraphics[width=0.8\textwidth]{662-pulsar}
@@ -105,11 +161,4 @@ Figure \ref{fig:cryostat-whole} shows a view of the cryostat head alond with the
 \label{fig:662-pulsar}
 \end{figure}
 
-
-
-Chapter Detector characterization
-Sections- each with methods and results
-Leakage current
-Capacitance
-Spectrum
 
