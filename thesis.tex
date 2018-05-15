@@ -15,7 +15,7 @@
 \usepackage[backend=bibtex, sorting=none, bibstyle=ieee]{biblatex}  %reference manager
 \usepackage[page]{appendix}  %for appendices
 \usepackage{rotating}  %for rotated, landscape images
-\usepackage{ulem}  %for underlined section titles
+\usepackage[normalem]{ulem}  %for underlined section titles
 \usepackage{siunitx}  %for units
 \usepackage{amsmath,amsthm,amssymb,amsfonts} 
 \usepackage[bookmarks=true, hidelinks]{hyperref}
@@ -179,6 +179,7 @@
 
 % Adjust subsection title formatting
 \titleformat{\subsection}{\normalfont}{\uline{\thesubsection}}{0em}{\uline{\hspace{1em}#1}}
+%\titleformat{\subsection}{\normalfont}{\thesubsection}{0em}{\hspace{1em}#1}
 
 % Adjust subsubsection title formatting
 \titleformat{\subsubsection}{\normalfont\itshape}{\thesubsection}{1em}{#1}
