@@ -1,4 +1,4 @@
-\chapter{Radiation's interaction with matter and its detection}
+\chapter{Principles of radiation detection}
 
 \section{Interaction of radiation with Matter}
 Several different types of radiation have the potential to deposit energy in a germanium detector given the right conditions.
@@ -7,7 +7,7 @@ It is important to consider that the average germanium detector has a mass of a 
 This shielding limits the amounts of certain particles that can interact with the detector and has little effect on other particles.
 Alpha particles are easily stopped by thin paper and beta particles are blocked by thin layers of plastic so these two types of radiation are often not of concern to Ge detectors.
 It is important to note that gamma rays specifically can pass easily through thin plastic and metal layers but are likely to interact and deposit energy after a few centimeters.
-Neutrons and muons can interact with Ge detectors but they are more likely to just pass through without depositing any energy.
+Neutrons and muons can interact with Ge detectors but they are more likely to just pass through with a small portion of their energy deposited.
 \begin{figure}[htpb]
 \centering
 \includegraphics[width=\textwidth]{penetration}
@@ -32,7 +32,7 @@ Beta particles are more likely than alpha particles to interact with a germanium
 Many nuclides decay via beta emission so it is still possible for decays to occur inside the shielding that could hit the detector, or the rare case that a beta would penetrate the housing.
 Special detectors can also implement a beryllium window that would facilitate the passage of beta particles to the detector.
 Betas lose energy much slower than alpha particles, through both coulomb and radiative processes, so their path through space can be winding and long.
-Betas interact with orbital electrons due to them both being negatively charged.
+Betas ionize surrounding atoms through the Coulomb force.
 
 
 \subsection{Neutrons}
@@ -46,12 +46,11 @@ This changes the atomic mass of the atom and can result in a decay which would c
 That gamma ray could then go on to interact with the detector and deposit its energy.
 Faster neutrons can scatter off nucleus and deposit some energy.
 If a neutron scatters elastically, it gives a nuclear recoil and changes direction.
-If it scatters inelastically, it will give a nuclear recoil and can cause and excitation which would result in a gamma ray.
-Finally, the fastest neutrons can undergo spallation.
-Spallation is when an incoming neutron hits a nucleus and blows it apart and give off massive amounts of energy.
+If it scatters inelastically, it will give a nuclear recoil and can cause an excitation which would result in a gamma ray.
+Finally, the fastest neutrons can blow a nucleus apart and give off massive amounts of energy. This is called neutron spallation.
 
 \subsection{Muons}
-Muons are negatively charged particles, most of which come from cosmic rays, and are minimum ionizing. 
+Muons are similar to electrons, but much heavier. They are charged particles, most of which come from cosmic rays, and are minimum ionizing. 
 Muons can travel deep underground and can also create a huge deposition of energy in very short time.
 Muons can also spallate.
 
@@ -68,8 +67,8 @@ Gamma rays can interact with a germanium detector in three ways: through the pho
 
 The photoelectric effect got Einstein a Nobel prize and is one of the most important interactions light can have with matter.
 For the photoelectric effect to occur, an incoming electromagnetic wave must have energy higher than the energy binding the electron to the atom.
-If it does, a gamma ray can hit and atom, be absorbed, and eject an electron with kinetic energy proportional to the incoming gamma ray.
-This electron will then wander around losing energy until it is ejected from the surface or stops.
+If it does, a gamma ray can hit an atom, be absorbed, and eject an electron with kinetic energy proportional to the incoming gamma ray.
+This electron will then wander around losing energy until it leaves the surface or stops inside the material.
 The filling of the hole left by the ejected electron can also cause the emission of characteristic x-ray photons.
 
 The second method, Compton scattering, is the most common interaction of germanium detectors and gamma rays.
@@ -78,7 +77,7 @@ This recoil electron will then lose energy to the bulk.
 
 The final interaction is pair production.
 Pair production can occur only if the gamma ray has an energy in excess of twice the rest mass of an electron.
-The interaction takes place within the coulomb field of the nucleus and causes the gamma ray to disappear and be replaced by an electron positron pair.
+The interaction takes place within the coulomb field of the nucleus and causes the gamma ray to disappear and be replaced by an electron-positron pair.
 The positron will go on to annihilate which results in the creation of two more gamma rays that could deposit some energy to the detector.
 \begin{figure}[htpb]
 \centering
@@ -113,7 +112,7 @@ The other 6.5\% of the time results in the cesium decaying directly to the groun
 Cesium 137 is often used in detector calibration due to the abundance in nature and its single 662 keV gamma ray.
 If a source of cesium 137 is placed next to an ionization detector, a spectrum similar to Figure \ref{fig:cs137spectrum} can be obtained.
 The spectrum clearly shows a peak in-between the energy values of 620 and 750 keV.
-If the detector could perfectly absorb and measure all of the energy from each gamma ray, it would result in a narrow peak around 662 keV; however, no detector is perfect and statistical fluctuations lead to the widening of the peak.
+This is because no detector is perfect and statistical fluctuations inside the detector and electronic noises lead to the widening of the peak.
 The measure of how precisely a detector can detect energy and read it out is called energy resolution.
 \begin{figure}[htpb]
 \centering
