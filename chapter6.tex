@@ -7,8 +7,8 @@ Thus, a measure of leakage current is a necessary initial step to analyze if the
 
 If the leakage current is tested and determined to be of an acceptable level (on the order of a few picoamps or less), testing can proceed.
 The next property measured is the detector capacitance.
-This measurement is made using an injected pulsar and can also determine the depletion voltage of the detector.
-The detector capacitance and depletion voltage can also give an accurate measurement for the impurity concentration of the germanium.
+This measurement is made using injected pulses and can also be used to determine the depletion voltage of the detector.
+The impurity concentration of the crystal can be calculated using the depletion voltage and the geometry of the detector.
 Finally the detector spectrum is measured using several radioactive sources such as cobalt 60 and cesium 137.
 From this spectrum, the energy resolution of the detector can be determined and thus the overall quality.
 
@@ -22,7 +22,7 @@ The metal cylinder at the base is where the detector sits.
 \begin{figure}[htpb]
 \centering
 \includegraphics[width=\textwidth]{cryostat-whole}
-  \caption{Cryostat system used for detector calibration.A) Detector housing. B) preamplifier and signal output housing. C) Optional detector outputs. D) HV and pulsar input  and HV filter.}
+  \caption{Cryostat system used for detector calibration.A) Detector housing. B) preamplifier and signal output housing. C) Optional detector outputs. D) HV and test input  and HV filter.}
 \label{fig:cryostat-whole}
 \end{figure}
 
@@ -35,7 +35,7 @@ The method of how the detector is cooled is what varies among different cryostat
 Figure \ref{fig:cryostats} shows two types of cryostat designs.
 The left side of the figure depicts a cryostat with a cooling finger design.
 Typically the detector is in thermal contact with a long metal rod that is submerged in liquid nitrogen.
-The rod will eventually reach thermal equilibrium with the liquid nitrogen and is able to then able cool the detector.
+The rod will eventually reach thermal equilibrium with the liquid nitrogen and is able to cool the detector.
 \begin{figure}[htpb]
 \centering
 \includegraphics[width=\textwidth]{cryostats}
@@ -60,7 +60,7 @@ The cooling itself is also quite slow with the cold finger method and it can tak
 \label{fig:inner-cryostat}
 \end{figure}
 The gravity fed design has an advantage that the liquid nitrogen fills the L shaped tube which directly connects to the detector stage.
-This results in the detector being much closer to LN  and thus LN temperatures.
+This results in the detector temperature being much closer to the LN temperature.
 The detector can also be relatively quickly cooled down, reaching 80 Kelvin in approximately four hours.
 
 As shown in Figure \ref{fig:cryostat-whole}, the cryostat used at USD for detector characterization and testing is of the gravity fed design.
@@ -70,13 +70,13 @@ Removing the aluminum can on the front of the detector reveals the inner detecto
 Here the detector can be seen as the top hat shaped crystal with a gold foil covered contact placed on the top surface.
 Several wires can also be seen leading to the external electronics and circuitry.
 
-A cold finger design is easier for the user since all one has to do is dip the cold finger attached to the detector assembly into LN, however it is hard to open the housing or not allowed.
+A cold finger design is easier for the user since all one has to do is to dip the cold finger attached to the detector assembly into LN, however it is hard to open the housing or not allowed.
 The gravity fed design has a detector housing that is designed to be opened but the user is responsible for vacuum which makes it nice for research.
 Figure \ref{fig:cryostat-whole} shows a view of the cryostat used at USD with the attached input boxes, vacuum tube, and the interface between the cryostat and gravity fed Dewar.
 \begin{figure}[htpb]
 \centering
 \includegraphics[width=\textwidth]{crate}
-\caption{The electronics crate used in detector characterization. From left to right: Ortec shaping amplifier, Canberra pulsar, Ortec ASPEC multi channel analyzer, preamplifier power supply, Canberra HV supply, CAEN HV supply, Tennelec shaping amplifier}
+\caption{The electronics crate used in detector characterization. From left to right: Ortec shaping amplifier, Canberra pulser, Ortec ASPEC multi channel analyzer, preamplifier power supply, Canberra HV supply, CAEN HV supply, Tennelec shaping amplifier}
 \label{fig:crate}
 \end{figure}
 
@@ -116,49 +116,49 @@ The plot shows a stable leakage current of only a few picoamps until around 500 
 The initial stability of the leakage current shows that the detector contacts are working but the rise means that they are far from perfect.
 A good detector should be able to have an applied voltage of several thousand volts before breaking down.
 
-The next step of detector testing is to measure the capacitance
-Capacitance measurements involve the use of an injected pulsar of known magnitude.
+The next step of detector testing is to measure the capacitance.
+Capacitance measurements involve the use of injected pulses of known magnitude.
 Pulses are sent to the detector that mimic that of a signal.
-As the voltage across the detector is changed, the magnitude of the pulsar will change until the detector reaches its depletion voltage.
-The height of this pulsar at depletion voltage can be used to determine the detector capacitance based on the formula:
+As the voltage across the detector is changed, the magnitude of the pulse will change until the detector reaches its depletion voltage.
+The height of this pulse at depletion voltage can be used to determine the detector capacitance based on the formula:
 \begin{align*}
 C_d=\frac{Q}{V}=\frac{\frac{E\times 1.6\times 10^{-19}}{2.96ev}}{v(mV)\times \frac{8}{125}}
 \end{align*}
-where E is the pulsar energy and v(mV) is the pulsar output voltage from the oscilloscope
+where $E$ is the pulse energy and v(mV) is the pulse output voltage from the oscilloscope. The location of the pulser peak in the final energy spectrum tells the value of $E$.
 
 \begin{figure}[htpb]
 \centering
 \includegraphics[width=\textwidth]{capacitance-test}
-\caption{Plot of detector capacitance vs applied voltage}
+\caption{Plot of relative detector capacitance vs applied voltage}
 \label{fig:capacitance-test}
 \end{figure}
-Figure \ref{fig:capacitance-test} shows a plot of the detector capacitance vs applied voltage.
+Figure \ref{fig:capacitance-test} shows a plot of the relative detector capacitance vs applied voltage.
 As mentioned earlier, the capacitance test can also be a rough test of determining depletion voltage and thus detector purity.
 For HP50765-1N, the detector reached a stable capacitance value, and thus depleted, at around 100 volts.
-This low depletion voltage means the detector is made of extremely pure material, on the order of $10^{9}cm^{-3}$
+This low depletion voltage means the detector is made of extremely pure material, on the order of $10^{9}cm^{-3}$.
 
 \begin{figure}[htpb]
 \centering
 \includegraphics[width=\textwidth]{cs-137-test}
-\caption{Spectrum obtained from detector NI with Cs 137 and pulsar peaks highlighted in blue. x-axis is counts}
+\caption{Spectrum obtained from detector NI with Cs 137 and pulser peaks highlighted in blue. Y-axis shows the event rate in each energy bin.}
 \label{fig:cs-137-test}
 \end{figure}
-Since the detector passed both the leakage current and capacitance tests, it can be exposed to a radioactive source and a spectrum can be obtained.
-For this test, the detector was exposed to a Cesium 137 source as well as continuous pulsar injection.
+Since the detector passed the leakage current and can be depleted within a reasonable voltage, it can be exposed to a radioactive source and a spectrum can be obtained.
+For this test, the detector was exposed to a Cesium 137 source as well as continuous pulse injection.
 Figure \ref{fig:cs-137-test} shows the spectrum after 40 minutes of exposure.
-The gamma ray and pulsar peaks are highlighted in blue.
-As mentioned earlier, Cs 137 has a gamma ray peak at 662 keV which matches the spectrum perfectly.
+The gamma ray and pulser peaks are highlighted in blue.
+As mentioned earlier, Cs 137 has a gamma ray peak at 662 keV which is shown in the spectrum perfectly.
 Also shown clearly is the Compton edge and shoulder mentioned in chapter 2.
 
-The energy resolution of the detector can be determined by evaluating the pulsar and 662 keV peak for their width at half of the max point of the distribution.
+The energy resolution of the detector can be determined by evaluating the pulser and 662 keV peak for their widths at half of the max point of the distribution.
 This is called full-width half max (FWHM) and is a measure of how spread out the energy distribution of the peak is.
 Perfect energy resolution would result in a straight line while spreading of the peak results in lower energy resolution.
-The Cs 137 peak at 662 keV for detector HP50765-1N has a FWHM of the 2.83 as shown in Figure \ref{fig:662-pulsar} which is similar to standard germanium detectors.
+The Cs 137 peak at 662 keV for detector HP50765-1N has a FWHM of the 2.83 as shown in Figure \ref{fig:662-pulser} which is similar to standard germanium detectors.
 \begin{figure}[htpb]
 \centering
 \includegraphics[width=0.8\textwidth]{662-pulsar}
-\caption{Cs-137 and injected pulsar peak information with FWHM}
-\label{fig:662-pulsar}
+\caption{Cs-137 and injected pulser peak information with FWHM.}
+\label{fig:662-pulser}
 \end{figure}
 
 
