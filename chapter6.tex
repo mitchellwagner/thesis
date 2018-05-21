@@ -117,10 +117,12 @@ The initial stability of the leakage current shows that the detector contacts ar
 A good detector should be able to have an applied voltage of several thousand volts before breaking down.
 
 The next step of detector testing is to measure the capacitance.
-Capacitance measurements involve the use of injected pulses of known magnitude.
+Two types of capacitance measurements are used, relative and absolute.
+Relative capacitance measurements involve the use of injected pulses of known magnitude.
 Pulses are sent to the detector that mimic that of a signal.
 As the voltage across the detector is changed, the magnitude of the pulse will change until the detector reaches its depletion voltage.
-The height of this pulse at depletion voltage can be used to determine the detector capacitance based on the formula:
+The height of this pulse at depletion voltage can be used to determine the detector capacitance.
+Absolute capacitance measurements are based off spectrum data and come after a spectrum is obtained.
 \begin{align*}
 C_d=\frac{Q}{V}=\frac{\frac{E\times 1.6\times 10^{-19}}{2.96ev}}{v(mV)\times \frac{8}{125}}
 \end{align*}
@@ -161,4 +163,9 @@ The Cs 137 peak at 662 keV for detector HP50765-1N has a FWHM of the 2.83 as sho
 \label{fig:662-pulser}
 \end{figure}
 
-
+After a spectrum is obtained, the absolute capacitance can be measured.
+The formula for this is:
+\begin{align*}
+C_d=\frac{Q}{V}=\frac{\frac{E\times 1.6\times 10^{-19}}{2.96ev}}{v(mV)\times \frac{8}{125}}
+\end{align*}
+where $E$ is the pulse energy and v(mV) is the pulse output voltage from the oscilloscope. The location of the pulser peak in the final energy spectrum tells the value of $E$.
